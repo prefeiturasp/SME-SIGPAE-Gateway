@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SoapCore;
+using System.ServiceModel.Channels;
 
 namespace SME.Terceirizadas.Gateway
 {
@@ -44,9 +45,12 @@ namespace SME.Terceirizadas.Gateway
 
             app.UseAuthorization();
 
-            app.UseSoapEndpoint<ISmeProxySigpaeService>("/proxy/SmeProxySigpae.svc", new SoapEncoderOptions(){}, SoapSerializer.XmlSerializer);
+            app.UseSoapEndpoint<ISmeProxySigpaeService>("/proxy/SmeProxySigpae.svc", new SoapEncoderOptions()
+            {
+                 MessageVersion = MessageVersion.Soap12WSAddressingAugust2004                
 
-            
+            }, SoapSerializer.XmlSerializer);
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
