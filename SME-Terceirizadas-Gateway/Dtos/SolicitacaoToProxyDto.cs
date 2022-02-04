@@ -62,7 +62,7 @@ namespace SME.Terceirizadas.Gateway.Dtos
         public int StrNumGui;
 
         [XmlElement(ElementName = "DtEntrega", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
-        public DateTime DtEntrega;
+        public string DtEntrega;
 
         [XmlElement(ElementName = "StrCodUni", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
         public int StrCodUni;
