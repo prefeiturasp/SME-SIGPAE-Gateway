@@ -75,6 +75,9 @@ namespace SME.Terceirizadas.Gateway
 
         private static codresMOD EnviaRequisicaoSolicitacao(string urlSolicitacao, string xmlforPostIntoSigpae)
         {
+
+            Console.WriteLine(xmlforPostIntoSigpae);
+
             using (var httpClient = new HttpClient())
             {
                 var requestForSigpae = new HttpRequestMessage
@@ -107,6 +110,8 @@ namespace SME.Terceirizadas.Gateway
         }
         private static codresMOD EnviaRequisicaoCancelamento(string urlSolicitacao, string xmlforPostIntoSigpae)
         {
+            Console.WriteLine(xmlforPostIntoSigpae);
+
             using (var httpClient = new HttpClient())
             {
                 var requestForSigpae = new HttpRequestMessage

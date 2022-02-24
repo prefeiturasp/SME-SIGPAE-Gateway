@@ -39,11 +39,20 @@ namespace SME.Terceirizadas.Gateway.Dtos
         [XmlElement(ElementName = "StrNomAli", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
         public string StrNomAli;
 
-        [XmlElement(ElementName = "StrEmbala", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
-        public string StrEmbala;
+        [XmlElement(ElementName = "StrTpEmbala", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
+        public string StrTpEmbala;
 
-        [XmlElement(ElementName = "IntQtdVol", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
-        public int IntQtdVol;
+        [XmlElement(ElementName = "StrQtEmbala", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
+        public string StrQtEmbala;
+
+        [XmlElement(ElementName = "StrDescEmbala", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
+        public string StrDescEmbala;
+
+        [XmlElement(ElementName = "StrPesoEmbala", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
+        public string StrPesoEmbala;
+
+        [XmlElement(ElementName = "StrUnMedEmbala", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
+        public string StrUnMedEmbala;
     }
 
     [XmlRoot(ElementName = "alimentos", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
@@ -62,7 +71,7 @@ namespace SME.Terceirizadas.Gateway.Dtos
         public int StrNumGui;
 
         [XmlElement(ElementName = "DtEntrega", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
-        public DateTime DtEntrega;
+        public string DtEntrega;
 
         [XmlElement(ElementName = "StrCodUni", Namespace = "https://sigpae.sme.prefeitura.sp.gov.br")]
         public int StrCodUni;

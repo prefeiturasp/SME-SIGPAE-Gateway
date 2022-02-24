@@ -22,23 +22,23 @@ namespace SME.Terceirizadas.Gateway
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlRoot(ElementName = "oWsAcessoModel")]    
+    [XmlRoot(ElementName = "oWsAcessoModel")]
     public class acessMOD
     {
         public acessMOD()
         {
 
-        }        
+        }
 
         [DataMember]
-        
+
         /// <remarks/>
         public string StrId
         {
-            get;set;
+            get; set;
         }
 
-        [DataMember]        
+        [DataMember]
         /// <remarks/>
         public string StrToken
         {
@@ -338,7 +338,7 @@ namespace SME.Terceirizadas.Gateway
 
         private string strNumGuiField;
 
-        
+
         public string StrNumGui
         {
             get
@@ -368,11 +368,11 @@ namespace SME.Terceirizadas.Gateway
 
         private int intSeqenvField;
 
-        
+
 
         private int intQtGuiaField;
 
-        
+
         public string StrCnpj
         {
             get
@@ -385,7 +385,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrNumSol
         {
             get
@@ -398,7 +398,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public int IntSeqenv
         {
             get
@@ -416,7 +416,7 @@ namespace SME.Terceirizadas.Gateway
         {
             get; set;
         }
-        
+
         public int IntQtGuia
         {
             get
@@ -460,7 +460,7 @@ namespace SME.Terceirizadas.Gateway
 
         private string strMensagemField;
         [DataMember]
-        
+
         /// <remarks/>
         public string StrStatus
         {
@@ -474,7 +474,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
         [DataMember]
-        
+
         /// <remarks/>
         public string StrMensagem
         {
@@ -505,11 +505,16 @@ namespace SME.Terceirizadas.Gateway
 
         private string strNomAliField;
 
-        private string strEmbalaField;
+        private string strTpEmbala;
 
-        private int intQtdVolField;
+        private string strQtEmbala;
 
-        
+        private string strDescEmbala;
+
+        private string strPesoEmbala;
+
+        private string strUnMedEmbala;
+
         public string StrCodSup
         {
             get
@@ -522,7 +527,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrCodPapa
         {
             get
@@ -535,7 +540,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrNomAli
         {
             get
@@ -548,29 +553,62 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
-        public string StrEmbala
+
+        public string StrTpEmbala
         {
             get
             {
-                return this.strEmbalaField;
+                return this.strTpEmbala;
             }
             set
             {
-                this.strEmbalaField = value;
+                this.strTpEmbala = value;
             }
         }
 
-        
-        public int IntQtdVol
+
+        public string StrQtEmbala
         {
             get
             {
-                return this.intQtdVolField;
+                return this.strQtEmbala;
             }
             set
             {
-                this.intQtdVolField = value;
+                this.strQtEmbala = value;
+            }
+        }
+        public string StrDescEmbala
+        {
+            get
+            {
+                return this.strDescEmbala;
+            }
+            set
+            {
+                this.strDescEmbala = value;
+            }
+        }
+        public string StrPesoEmbala
+        {
+            get
+            {
+                return this.strPesoEmbala;
+            }
+            set
+            {
+                this.strPesoEmbala = value;
+            }
+        }
+        public string StrUnMedEmbala
+        {
+            get
+            {
+                return this.strUnMedEmbala;
+            }
+            set
+            {
+                this.strUnMedEmbala = value;
             }
         }
     }
@@ -584,7 +622,7 @@ namespace SME.Terceirizadas.Gateway
     [XmlRoot(ElementName = "alimentos")]
     public partial class Alimentos
     {
-        
+
         public Alimento[] Alimento { get; set; }
     }
 
@@ -598,7 +636,7 @@ namespace SME.Terceirizadas.Gateway
     [XmlRoot(ElementName = "guias")]
     public class Guias
     {
-        
+
         public Guia[] Guia { get; set; }
 
     }
@@ -639,7 +677,7 @@ namespace SME.Terceirizadas.Gateway
 
         private Alimentos alimentosField;
 
-        
+
         public string StrNumGui
         {
             get
@@ -652,7 +690,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string DtEntrega
         {
             get
@@ -665,7 +703,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrCodUni
         {
             get
@@ -678,7 +716,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrNomUni
         {
             get
@@ -691,7 +729,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrEndUni
         {
             get
@@ -704,7 +742,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrNumUni
         {
             get
@@ -717,7 +755,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrBaiUni
         {
             get
@@ -730,7 +768,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrCepUni
         {
             get
@@ -743,7 +781,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrCidUni
         {
             get
@@ -756,7 +794,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrEstUni
         {
             get
@@ -769,7 +807,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrConUni
         {
             get
@@ -782,7 +820,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrTelUni
         {
             get
@@ -824,7 +862,7 @@ namespace SME.Terceirizadas.Gateway
 
         private int intTotVolField;
 
-        
+
         public string StrCnpj
         {
             get
@@ -837,7 +875,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public string StrNumSol
         {
             get
@@ -850,7 +888,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public int IntSeqenv
         {
             get
@@ -870,7 +908,7 @@ namespace SME.Terceirizadas.Gateway
             get; set;
         }
 
-        
+
         public int IntQtGuia
         {
             get
@@ -883,7 +921,7 @@ namespace SME.Terceirizadas.Gateway
             }
         }
 
-        
+
         public int IntTotVol
         {
             get

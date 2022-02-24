@@ -19,4 +19,4 @@ RUN dotnet publish "SME-Terceirizadas-Gateway-WS.csproj" -c Release -o /app/publ
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Poc.Wcf.Core.dll"]
+ENTRYPOINT ["dotnet", "SME-Terceirizadas-Gateway-WS.dll"]
